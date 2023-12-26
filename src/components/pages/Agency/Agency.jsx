@@ -58,7 +58,7 @@ const Agency = () => {
                   pageCount={posts.pageCount}
                   marginPagesDisplayed={2}
                   pageRangeDisplayed={5}
-                  onPageChange={(n) => postsPagination(n, 34, setPosts)}
+                  onPageChange={(n) => postsPagination(n, 18, setPosts)}
                   containerClassName={"pagination"}
                   subContainerClassName={"pages pagination"}
                   activeClassName={"active"}

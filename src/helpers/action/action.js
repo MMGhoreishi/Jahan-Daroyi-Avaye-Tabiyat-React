@@ -46,7 +46,6 @@ export const sendPostComment = async ({ request, params }) => {
         progress: undefined,
         theme: "colored",
       });
-      console.log(err);
     });
 
   return null;
@@ -66,7 +65,7 @@ export const contactUs = async ({ request }) => {
 
   await axios
     .post(
-      `${clientConfig.siteUrl}/wp-json/contact-form-7/v1/contact-forms/167/feedback`,
+      `${clientConfig.siteUrl}/wp-json/contact-form-7/v1/contact-forms/67/feedback`,
       formData2,
       {
         headers: {
@@ -75,7 +74,6 @@ export const contactUs = async ({ request }) => {
       }
     )
     .then((res) => {
-      console.log(res.data, "is the new contact us form");
       if (res.data.status === "mail_sent") {
         document.getElementById("myclearbtn-contactUs").click();
 
@@ -112,7 +110,6 @@ export const contactUs = async ({ request }) => {
         progress: undefined,
         theme: "colored",
       });
-      console.log(err);
     });
 
   return null;
@@ -120,7 +117,7 @@ export const contactUs = async ({ request }) => {
 
 export const counseling = async ({ request }) => {
   const formData = await request.formData();
-  const { fname, femail, fphoneNumber, fsubject, fdateTime, fmessage } =
+  const { fname, femail, fphoneNumber, fsubject, fmessage } =
     Object.fromEntries(formData);
 
   const formData2 = new FormData();
@@ -128,12 +125,11 @@ export const counseling = async ({ request }) => {
   formData2.set("your-email", femail);
   formData2.set("your-tel", fphoneNumber);
   formData2.set("your-subject", fsubject);
-  formData2.set("your-dateTime", fdateTime);
   formData2.set("your-message", fmessage);
 
   await axios
     .post(
-      `${clientConfig.siteUrl}/wp-json/contact-form-7/v1/contact-forms/204/feedback`,
+      `${clientConfig.siteUrl}/wp-json/contact-form-7/v1/contact-forms/8/feedback`,
       formData2,
       {
         headers: {
@@ -179,9 +175,8 @@ export const counseling = async ({ request }) => {
               progress: undefined,
               theme: "colored",
             });
-            console.log(err);
           });
-      } else
+      } else {
         toast.error("خطایی رخ داد", {
           position: "top-right",
           autoClose: 5000,
@@ -192,6 +187,7 @@ export const counseling = async ({ request }) => {
           progress: undefined,
           theme: "colored",
         });
+      }
     })
     .catch((err) => {
       toast.error("خطایی رخ داد", {
@@ -204,7 +200,6 @@ export const counseling = async ({ request }) => {
         progress: undefined,
         theme: "colored",
       });
-      console.log(err);
     });
 
   return null;
@@ -224,7 +219,7 @@ export const agencyForm = async ({ request }) => {
 
   await axios
     .post(
-      `${clientConfig.siteUrl}/wp-json/contact-form-7/v1/contact-forms/273/feedback`,
+      `${clientConfig.siteUrl}/wp-json/contact-form-7/v1/contact-forms/78/feedback`,
       formData2,
       {
         headers: {
@@ -272,7 +267,6 @@ export const agencyForm = async ({ request }) => {
         progress: undefined,
         theme: "colored",
       });
-      console.log(err);
     });
 
   return null;
@@ -292,7 +286,7 @@ export const productPurchaseRequest = async ({ request }) => {
 
   await axios
     .post(
-      `${clientConfig.siteUrl}/wp-json/contact-form-7/v1/contact-forms/223/feedback`,
+      `${clientConfig.siteUrl}/wp-json/contact-form-7/v1/contact-forms/87/feedback`,
       formData2,
       {
         headers: {
@@ -337,7 +331,6 @@ export const productPurchaseRequest = async ({ request }) => {
         progress: undefined,
         theme: "colored",
       });
-      console.log(err);
     });
 
   return null;
@@ -357,7 +350,7 @@ export const packagePurchaseRequest = async ({ request }) => {
 
   await axios
     .post(
-      `${clientConfig.siteUrl}/wp-json/contact-form-7/v1/contact-forms/322/feedback`,
+      `${clientConfig.siteUrl}/wp-json/contact-form-7/v1/contact-forms/89/feedback`,
       formData2,
       {
         headers: {
@@ -402,7 +395,6 @@ export const packagePurchaseRequest = async ({ request }) => {
         progress: undefined,
         theme: "colored",
       });
-      console.log(err);
     });
 
   return null;

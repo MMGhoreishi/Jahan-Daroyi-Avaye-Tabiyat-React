@@ -19,10 +19,10 @@ export const postsLoader = async () => {
 
       posts.categories = res.data.filter(
         (category) =>
+          category.id !== 5 &&
           category.id !== 1 &&
-          category.id !== 10 &&
-          category.id !== 14 &&
-          category.id !== 30 &&
+          category.id !== 15 &&
+          category.id !== 18 &&
           category.id !== 34 &&
           !category.name.startsWith(filterValue) &&
           !category.name.startsWith(filterValue2)
@@ -124,7 +124,7 @@ export const aboutUsPostsLoader = async () => {
 
   await axios
     .get(
-      `${clientConfig.siteUrl}/wp-json/wp/v2/posts?categories=10&per_page=9`,
+      `${clientConfig.siteUrl}/wp-json/wp/v2/posts?categories=5&per_page=9`,
       {
         params: { page: 1 },
       }
@@ -144,7 +144,7 @@ export const servicesPostsLoader = async () => {
 
   await axios
     .get(
-      `${clientConfig.siteUrl}/wp-json/wp/v2/posts?categories=30&per_page=9`,
+      `${clientConfig.siteUrl}/wp-json/wp/v2/posts?categories=15&per_page=9`,
       {
         params: { page: 1 },
       }
@@ -163,7 +163,7 @@ export const agenciesPostsLoader = async () => {
 
   await axios
     .get(
-      `${clientConfig.siteUrl}/wp-json/wp/v2/posts?categories=34&per_page=9`,
+      `${clientConfig.siteUrl}/wp-json/wp/v2/posts?categories=18&per_page=9`,
       {
         params: { page: 1 },
       }
@@ -182,7 +182,7 @@ export const healedPatientsPostsLoader = async () => {
 
   await axios
     .get(
-      `${clientConfig.siteUrl}/wp-json/wp/v2/posts?categories=14&per_page=9`,
+      `${clientConfig.siteUrl}/wp-json/wp/v2/posts?categories=1&per_page=9`,
       {
         params: { page: 1 },
       }
@@ -204,14 +204,14 @@ export const homeLoader = async () => {
   };
 
   await axios
-    .get(`${clientConfig.siteUrl}/wp-json/wp/v2/posts?categories=10&per_page=1`)
+    .get(`${clientConfig.siteUrl}/wp-json/wp/v2/posts?categories=5&per_page=1`)
     .then((res) => {
       counted.aboutUsPosts = res.headers["x-wp-total"];
     })
     .catch((err) => console.error(err, "is error!"));
 
   await axios
-    .get(`${clientConfig.siteUrl}/wp-json/wp/v2/posts?categories=14&per_page=1`)
+    .get(`${clientConfig.siteUrl}/wp-json/wp/v2/posts?categories=1&per_page=1`)
     .then((res) => {
       counted.healedPatientsPosts = res.headers["x-wp-total"];
     })

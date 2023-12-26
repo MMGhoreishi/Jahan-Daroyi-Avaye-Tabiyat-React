@@ -52,7 +52,7 @@ const HealedPatients = () => {
                   pageCount={posts.pageCount}
                   marginPagesDisplayed={2}
                   pageRangeDisplayed={5}
-                  onPageChange={(n) => postsPagination(n, 14, setPosts)}
+                  onPageChange={(n) => postsPagination(n, 1, setPosts)}
                   containerClassName={"pagination"}
                   subContainerClassName={"pages pagination"}
                   activeClassName={"active"}
