@@ -24,7 +24,7 @@ const Home = () => {
           <div className="row">
             <div className="col-lg-4">
               <div className="number-of-consultations">
-                <i className="bx bxs-leaf"></i>
+                <i className="bx bxs-leaf text-success"></i>
                 تعداد مشاوره ها: {counted.counseling}
               </div>
               <Link to="/counseling" className="btn-counseling">
@@ -34,7 +34,7 @@ const Home = () => {
             </div>
             <div className="col-lg-4">
               <div className="number-of-awards">
-                <i className="bx bxs-leaf"></i> تعداد افتخارات:{" "}
+                <i className="bx bxs-leaf text-success"></i> تعداد افتخارات:{" "}
                 {counted.aboutUsPosts}
               </div>
 
@@ -45,7 +45,7 @@ const Home = () => {
             </div>
             <div className="col-lg-4">
               <div className="number-of-patients">
-                <i className="bx bxs-leaf"></i>
+                <i className="bx bxs-leaf text-success"></i>
                 تعداد درمان شدگان: {counted.healedPatientsPosts}
               </div>
               <Link to="/healed-patients" className="btn-patients">
