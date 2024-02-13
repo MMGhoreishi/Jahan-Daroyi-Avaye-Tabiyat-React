@@ -2024,7 +2024,12 @@ section {
 }
 
 .packages-posts .card .card-title {
-  font-size: 1.25rem;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1; /* Change this line if you want. In this case it trimmed the text to 3 lines. */
+  overflow: hidden;
+  color: #e98381;
+  font-size: 1.2rem;
 }
 
 .packages-posts .card .card-title i {
