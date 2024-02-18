@@ -95,6 +95,18 @@ h6 {
   }
 }
 
+.list-bullet-bold li::marker {
+  font-size: 1.5rem !important;
+}
+
+.card-title a {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1; /* Change this line if you want. In this case it trimmed the text to 3 lines. */
+  overflow: hidden;
+  font-size: 1.2rem;
+}
+
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/
@@ -222,6 +234,20 @@ h6 {
   opacity: 0.6;
 }
 
+/*--------------------------------------------------------------
+# Sale Banner
+--------------------------------------------------------------*/
+.sale-banner div {
+  background-color: #d8eab7;
+  box-shadow: 2px 2px 20px 2px gray;
+  border: solid 2px #00007f;
+  border-radius: 0 20px;
+  padding: 10px;
+  display: inline-block;
+}
+.sale-banner div p span {
+  color: #008000;
+}
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
@@ -2024,12 +2050,7 @@ section {
 }
 
 .packages-posts .card .card-title {
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 1; /* Change this line if you want. In this case it trimmed the text to 3 lines. */
-  overflow: hidden;
   color: #e98381;
-  font-size: 1.2rem;
 }
 
 .packages-posts .card .card-title i {

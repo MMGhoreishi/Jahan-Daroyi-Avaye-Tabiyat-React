@@ -17,6 +17,11 @@ const PackageForm = () => {
   const { post } = useLoaderData();
   const submit = useSubmit();
 
+  console.log("post-postttt>>>");
+  console.log(post.packageId);
+
+  if (post.packageId === "121") console.log("111111");
+
   const formik = useFormik({
     initialValues: {
       fname: "",
