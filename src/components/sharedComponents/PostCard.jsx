@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 
-const Post = ({ post, pageName }) => {
+const PostCard = ({ post, pageName }) => {
   console.log("post.uagb_featured_image_src>>>");
   console.log(post.uagb_featured_image_src);
 
@@ -120,4 +120,4 @@ const Post = ({ post, pageName }) => {
   );
 };
 
-export default Post;
+export default PostCard;

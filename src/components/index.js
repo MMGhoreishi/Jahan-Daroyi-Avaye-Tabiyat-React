@@ -21,3 +21,6 @@ export { default as AgencyForm } from "./pages/Agency/AgencyForm";
 export { default as Packages } from "./pages/Packages/Packages";
 export { default as Package } from "./pages/Packages/Package";
 export { default as PackageForm } from "./pages/Packages/PackageForm";
+export { default as SaleBanner } from "./sharedComponents/SaleBanner";
+export { default as PostCard } from "./sharedComponents/PostCard";
+export { default as Comments } from "./sharedComponents/Comments";

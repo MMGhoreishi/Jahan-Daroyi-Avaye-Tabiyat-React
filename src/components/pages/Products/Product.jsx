@@ -5,7 +5,7 @@ import { useLoaderData } from "react-router-dom";
 import Moment from "react-moment";
 import "moment/locale/fa";
 import { Helmet } from "react-helmet";
-import Comments from "../../sharedComponents/Comments";
+import { Comments, SaleBanner } from "../..";
 
 const Product = () => {
   const { post } = useLoaderData();
@@ -51,21 +51,7 @@ const Product = () => {
               <div className="product-content col-12">
                 {parse(post.content.rendered)}
 
-                <div className="sale-banner text-center">
-                  <div className="text-center">
-                    <p className="text-center">
-                      <span>ارسال محصول رایگان است با تضمین کیفیت</span>
-                    </p>
-                    <p className="text-center">
-                      <span>
-                        در صورت خرید 10 مورد بطور یکجا یک مورد هدیه تعلق می گیرد
-                      </span>
-                    </p>
-                    <p className="text-center">
-                      <span>تلفن مشاوره: 09215822781</span>
-                    </p>
-                  </div>
-                </div>
+                <SaleBanner />
 
                 <div className="row product-information">
                   <div className="col-md-4 pb-md-0 pb-3">

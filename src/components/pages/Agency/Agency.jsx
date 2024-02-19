@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link, useLoaderData } from "react-router-dom";
-import Post from "../../sharedComponents/Post";
+import { PostCard } from "../..";
 import { Helmet } from "react-helmet";
 import ReactPaginate from "react-paginate";
 import { postsPagination } from "../../../helpers/pagination/pagination";
@@ -42,7 +42,7 @@ const Agency = () => {
                 getPosts.map((post) => {
                   return (
                     <div key={post.id} className="col-lg-4 col-md-6 mt-3">
-                      <Post post={post} pageName="AGENCIES" />
+                      <PostCard post={post} pageName="AGENCIES" />
                     </div>
                   );
                 })}

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useLoaderData } from "react-router-dom";
-import Post from "../../sharedComponents/Post";
+import { PostCard } from "../..";
 import { Helmet } from "react-helmet";
 import ReactPaginate from "react-paginate";
 import { PostsByTagIdPagination } from "../../../helpers/pagination/pagination";
@@ -64,7 +64,7 @@ const PostsByTagId = () => {
                 getPosts.map((post) => {
                   return (
                     <div key={post.id} className="col-lg-4 col-md-6 mt-3">
-                      <Post
+                      <PostCard
                         post={post}
                         pageName={
                           posts.categoryId == 14

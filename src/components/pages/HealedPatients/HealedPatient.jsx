@@ -5,7 +5,7 @@ import { useLoaderData } from "react-router-dom";
 import Moment from "react-moment";
 import "moment/locale/fa";
 import { Helmet } from "react-helmet";
-import Comments from "../../sharedComponents/Comments";
+import { Comments } from "../..";
 
 const HealedPatient = () => {
   const { post } = useLoaderData();
