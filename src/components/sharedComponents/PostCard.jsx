@@ -1,12 +1,10 @@
 import parse from "html-react-parser";
 import { Link } from "react-router-dom";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import { extractContent } from "../../helpers/content/content";
 import "react-lazy-load-image-component/src/effects/blur.css";
 
 const PostCard = ({ post, pageName }) => {
-  console.log("post.uagb_featured_image_src>>>");
-  console.log(post.uagb_featured_image_src);
-
   return (
     <div
       className="card"
@@ -67,10 +65,24 @@ const PostCard = ({ post, pageName }) => {
             ) : (
               <i className="bi bi-film"></i>
             )}{" "}
-            {post.title.rendered}
+            <span data-bs-toggle="tooltip" title={post.title.rendered}>
+              {post.title.rendered}
+            </span>
           </Link>
         </h2>
-        <p className="card-text">{parse(post.excerpt.rendered)}</p>
+        <p className="card-text">
+          {parse(extractContent(post.content.rendered))}
+        </p>
+
+        {pageName === "PRODUCTS" || pageName === "PACKAGES" ? (
+          <p className="price">
+            <i class="bx bxs-leaf text-success"></i>{" "}
+            {parse(extractContent(post.excerpt.rendered))} تومان
+          </p>
+        ) : (
+          ""
+        )}
+
         <div className="d-grid">
           <Link
             to={`/${

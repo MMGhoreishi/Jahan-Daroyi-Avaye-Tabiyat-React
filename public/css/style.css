@@ -1365,6 +1365,10 @@ section {
   font-family: "Vazir-Light";
 }
 
+.posts .card .card-text p {
+  margin-bottom: 0 !important;
+}
+
 /*--------------------------------------------------------------
 # Posts By TagId Posts
 --------------------------------------------------------------*/
@@ -1401,6 +1405,10 @@ section {
   overflow: hidden;
   font-size: 1rem;
   font-family: "Vazir-Light";
+}
+
+.postsByTagId-posts .card .card-text p {
+  margin-bottom: 0 !important;
 }
 
 /*--------------------------------------------------------------
@@ -1441,6 +1449,10 @@ section {
   font-family: "Vazir-Light";
 }
 
+.healedPatients-posts .card .card-text p {
+  margin-bottom: 0 !important;
+}
+
 /*--------------------------------------------------------------
 # About Us Posts
 --------------------------------------------------------------*/
@@ -1477,6 +1489,10 @@ section {
   overflow: hidden;
   font-size: 1rem;
   font-family: "Vazir-Light";
+}
+
+.aboutUs-posts .card .card-text p {
+  margin-bottom: 0 !important;
 }
 
 /*--------------------------------------------------------------
@@ -1517,6 +1533,10 @@ section {
   font-family: "Vazir-Light";
 }
 
+.services-posts .card .card-text p {
+  margin-bottom: 0 !important;
+}
+
 /*--------------------------------------------------------------
 # Agencies Posts
 --------------------------------------------------------------*/
@@ -1553,6 +1573,10 @@ section {
   overflow: hidden;
   font-size: 1rem;
   font-family: "Vazir-Light";
+}
+
+.agencies-posts .card .card-text p {
+  margin-bottom: 0 !important;
 }
 
 /*--------------------------------------------------------------
@@ -2066,6 +2090,17 @@ section {
   font-family: "Vazir-Light";
 }
 
+.packages-posts .card .card-text p {
+  margin-bottom: 0 !important;
+}
+
+.packages-posts .card .price {
+  color: #dc3545;
+  font-weight: bold;
+  text-align: center;
+  font-style: italic;
+}
+
 /*--------------------------------------------------------------
 # Package
 --------------------------------------------------------------*/
@@ -2333,6 +2368,17 @@ section {
   overflow: hidden;
   font-size: 1rem;
   font-family: "Vazir-Light";
+}
+
+.products-posts .card .card-text p {
+  margin-bottom: 0 !important;
+}
+
+.products-posts .card .price {
+  color: #dc3545;
+  font-weight: bold;
+  text-align: center;
+  font-style: italic;
 }
 
 /*--------------------------------------------------------------
