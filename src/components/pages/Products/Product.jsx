@@ -23,10 +23,11 @@ const Product = () => {
           <div className="buy-btn">
             <div className="d-grid">
               <Link
-                to={post.title.rendered}
+                to={`${post.title.rendered}/${post.uagb_excerpt}`}
                 className="btn btn-danger btn-block"
               >
-                <i className="bi bi-basket"></i> خرید محصول
+                <i className="bi bi-basket"></i> خرید محصول (
+                {parse(post.uagb_excerpt)} تومان)
               </Link>
             </div>
           </div>

@@ -5,6 +5,8 @@ import { extractContent } from "../../helpers/content/content";
 import "react-lazy-load-image-component/src/effects/blur.css";
 
 const PostCard = ({ post, pageName }) => {
+  console.log("postyyyyy>>>");
+  console.log(post);
   return (
     <div
       className="card"
@@ -76,8 +78,8 @@ const PostCard = ({ post, pageName }) => {
 
         {pageName === "PRODUCTS" || pageName === "PACKAGES" ? (
           <p className="price">
-            <i class="bx bxs-leaf text-success"></i>{" "}
-            {parse(extractContent(post.excerpt.rendered))} تومان
+            <i class="bx bxs-leaf text-success"></i> {parse(post.uagb_excerpt)}{" "}
+            تومان
           </p>
         ) : (
           ""

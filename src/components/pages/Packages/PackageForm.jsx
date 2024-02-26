@@ -27,7 +27,7 @@ const PackageForm = () => {
       fname: "",
       femail: "",
       fphoneNumber: "",
-      fsubject: `${post.packageName}-${post.packageId}`,
+      fsubject: `با نام ${post.packageName}- آیدی ${post.packageId}- قیمت ${post.packagePrice}`,
       fmessage: "",
     },
     validationSchema: validationSchema,
@@ -59,6 +59,25 @@ const PackageForm = () => {
             </div>
 
             <div className="row mt-5">
+              <div className="col-12 text-center">
+                <table class="table table-striped table-bordered border border-success table-hover table-danger rounded-pill">
+                  <thead>
+                    <tr>
+                      <th>کد شناسایی پکیج</th>
+                      <th>نام پکیج</th>
+                      <th>قیمت پکیج</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>{post.packageId}</td>
+                      <td>{post.packageName}</td>
+                      <td>{post.packagePrice}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
               <div className="col-12">
                 <Form
                   method="post"
@@ -101,7 +120,7 @@ const PackageForm = () => {
                     </div>
                   </div>
                   <div className="row mt-3">
-                    <div className="col-md-6 form-group">
+                    <div className="col-12 form-group">
                       <input
                         type="number"
                         className="form-control"
@@ -118,8 +137,7 @@ const PackageForm = () => {
                             {formik.errors.fphoneNumber}
                           </div>
                         )}
-                    </div>
-                    <div className="col-md-6 form-group mt-3 mt-md-0">
+
                       <input
                         type="text"
                         className="form-control"
@@ -127,6 +145,7 @@ const PackageForm = () => {
                         id="subject"
                         value={formik.values.fsubject}
                         disabled
+                        hidden
                       />
                     </div>
                   </div>

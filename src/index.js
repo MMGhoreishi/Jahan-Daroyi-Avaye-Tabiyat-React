@@ -134,7 +134,7 @@ const router = createBrowserRouter([
         action: sendPostComment,
       },
       {
-        path: "/packages/:packageId/:packageName",
+        path: "/packages/:packageId/:packageName/:packagePrice",
         element: <PackageForm />,
         loader: packageFormLoader,
         action: packagePurchaseRequest,
@@ -151,7 +151,7 @@ const router = createBrowserRouter([
         action: sendPostComment,
       },
       {
-        path: "/products/:productId/:productName",
+        path: "/products/:productId/:productName/:productPrice",
         element: <ProductForm />,
         loader: productFormLoader,
         action: productPurchaseRequest,

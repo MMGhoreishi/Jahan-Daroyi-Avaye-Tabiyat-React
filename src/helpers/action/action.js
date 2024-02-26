@@ -277,6 +277,12 @@ export const productPurchaseRequest = async ({ request }) => {
   const { fname, femail, fphoneNumber, fsubject, fmessage } =
     Object.fromEntries(formData);
 
+  console.log(fname);
+  console.log(femail);
+  console.log(fphoneNumber);
+  console.log(fsubject);
+  console.log(fmessage);
+
   const formData2 = new FormData();
   formData2.set("your-name", fname);
   formData2.set("your-email", femail);
@@ -295,6 +301,9 @@ export const productPurchaseRequest = async ({ request }) => {
       }
     )
     .then(async (res) => {
+      console.log("My-Product-Error>>>>");
+      console.log(res);
+
       if (res.data.status === "mail_sent") {
         document.getElementById("myclearbtn-productForm").click();
 

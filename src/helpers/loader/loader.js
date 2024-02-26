@@ -279,7 +279,11 @@ export const productsLoader = async () => {
 };
 
 export const productFormLoader = async ({ params }) => {
-  let post = { productId: params.productId, productName: params.productName };
+  let post = {
+    productId: params.productId,
+    productName: params.productName,
+    productPrice: params.productPrice,
+  };
 
   return { post };
 };
@@ -334,7 +338,11 @@ export const packagesLoader = async () => {
 };
 
 export const packageFormLoader = async ({ params }) => {
-  let post = { packageId: params.packageId, packageName: params.packageName };
+  let post = {
+    packageId: params.packageId,
+    packageName: params.packageName,
+    packagePrice: params.packagePrice,
+  };
 
   return { post };
 };

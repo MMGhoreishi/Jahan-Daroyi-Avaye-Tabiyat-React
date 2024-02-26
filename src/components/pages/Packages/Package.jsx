@@ -12,6 +12,9 @@ const Package = () => {
   const postCategories = post._embedded["wp:term"][0];
   const postTags = post._embedded["wp:term"][1];
 
+  console.log("post-packages2222>>>>");
+  console.log(post);
+
   return (
     <>
       <Helmet>
@@ -23,10 +26,11 @@ const Package = () => {
           <div className="buy-btn">
             <div className="d-grid">
               <Link
-                to={post.title.rendered}
+                to={`${post.title.rendered}/${post.uagb_excerpt}`}
                 className="btn btn-danger btn-block"
               >
-                <i className="bi bi-basket"></i> خرید پکیج
+                <i className="bi bi-basket"></i> خرید پکیج (
+                {parse(post.uagb_excerpt)} تومان)
               </Link>
             </div>
           </div>

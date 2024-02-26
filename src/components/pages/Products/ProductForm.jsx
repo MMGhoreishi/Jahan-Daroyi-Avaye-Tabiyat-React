@@ -17,12 +17,15 @@ const ProductForm = () => {
   const { post } = useLoaderData();
   const submit = useSubmit();
 
+  console.log("post-product>>>");
+  console.log(post);
+
   const formik = useFormik({
     initialValues: {
       fname: "",
       femail: "",
       fphoneNumber: "",
-      fsubject: `${post.productName}-${post.productId}`,
+      fsubject: `با نام ${post.productName}- آیدی ${post.productId}- قیمت ${post.productPrice}`,
       fmessage: "",
     },
     validationSchema: validationSchema,
@@ -54,6 +57,25 @@ const ProductForm = () => {
             </div>
 
             <div className="row mt-5">
+              <div className="col-12 text-center">
+                <table class="table table-striped table-bordered border border-success table-hover table-danger rounded-pill">
+                  <thead>
+                    <tr>
+                      <th>کد شناسایی محصول</th>
+                      <th>نام محصول</th>
+                      <th>قیمت محصول</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>{post.productId}</td>
+                      <td>{post.productName}</td>
+                      <td>{post.productPrice}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
               <div className="col-12">
                 <Form
                   method="post"
@@ -96,7 +118,7 @@ const ProductForm = () => {
                     </div>
                   </div>
                   <div className="row mt-3">
-                    <div className="col-md-6 form-group">
+                    <div className="col-12 form-group">
                       <input
                         type="number"
                         className="form-control"
@@ -113,8 +135,7 @@ const ProductForm = () => {
                             {formik.errors.fphoneNumber}
                           </div>
                         )}
-                    </div>
-                    <div className="col-md-6 form-group mt-3 mt-md-0">
+
                       <input
                         type="text"
                         className="form-control"
@@ -122,6 +143,7 @@ const ProductForm = () => {
                         id="subject"
                         value={formik.values.fsubject}
                         disabled
+                        hidden
                       />
                     </div>
                   </div>
