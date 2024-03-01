@@ -2,13 +2,11 @@ import { Helmet } from "react-helmet";
 import * as yup from "yup";
 import { Form, useSubmit } from "react-router-dom";
 import { useFormik } from "formik";
+import { FormGuide } from "../..";
 
 const validationSchema = yup.object({
   fname: yup.string().required("لطفا نام و نام خانوادگی خود را وارد کنید"),
-  femail: yup
-    .string()
-    .email("آدرس ایمیل نامعتبر است")
-    .required("لطفا ایمیل خود را وارد کنید"),
+  femail: yup.string().email("آدرس ایمیل نامعتبر است"),
   fphoneNumber: yup.number().required("لطفا شماره تلفن همراه خود را وارد کنید"),
   fsubject: yup.string().required("لطفا عنوان را وارد کنید"),
   fmessage: yup.string().required("لطفا پیام خود را وارد کنید"),
@@ -100,6 +98,7 @@ const ContactUs = () => {
               </div>
 
               <div className="col-lg-8 mt-5 mt-lg-0">
+                <FormGuide />
                 <Form
                   method="post"
                   className="contact-form"

@@ -67,7 +67,11 @@ const PostCard = ({ post, pageName }) => {
             ) : (
               <i className="bi bi-film"></i>
             )}{" "}
-            <span data-bs-toggle="tooltip" title={post.title.rendered}>
+            <span
+              data-bs-toggle="tooltip"
+              data-bs-placement="bottom"
+              title={post.title.rendered}
+            >
               {post.title.rendered}
             </span>
           </Link>

@@ -24,3 +24,4 @@ export { default as PackageForm } from "./pages/Packages/PackageForm";
 export { default as SaleBanner } from "./sharedComponents/SaleBanner";
 export { default as PostCard } from "./sharedComponents/PostCard";
 export { default as Comments } from "./sharedComponents/Comments";
+export { default as FormGuide } from "./sharedComponents/FormGuide";
