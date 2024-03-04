@@ -39,7 +39,7 @@ const ContactUs = () => {
         <section className="contact">
           <div className="container" data-aos="fade-up">
             <div className="section-title">
-              <h2>تماس با ما</h2>
+              <h2>پشتیبانی و نظرات (انتقادات و پیشنهادات)</h2>
               <p>
                 از حضور شما دوست عزیز در سایت جهان دارویی آوای طبیعت بسیار
                 خوشحالیم و باعث افتخار ما است در صورت داشتن هرگونه نیاز به ثبت
