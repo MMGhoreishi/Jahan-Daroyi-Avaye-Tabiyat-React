@@ -77,7 +77,18 @@ const MainLayout = ({ children }) => {
                   onClick={() => setMobileNavToggle(false)}
                 >
                   <span>
-                    <i className="bx bx-support"></i> تماس با ما
+                    <i className="bx bx-support"></i> پشتیبانی و نظرات
+                  </span>
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/contact-us"
+                  onClick={() => setMobileNavToggle(false)}
+                >
+                  <span>
+                    <i class="bx bx-message-square-dots"></i> انتقادات و
+                    پیشنهادات
                   </span>
                 </NavLink>
               </li>
