@@ -24,7 +24,7 @@ const HealedPatient = () => {
             <div className="section-title">
               <h2>{post.title.rendered}</h2>
 
-              {parse(post.excerpt.rendered)}
+              {/* {parse(post.excerpt.rendered)} */}
 
               <img
                 className="healedPatient-image mx-auto d-block img-fluid rounded w-100 mt-3"

@@ -25,7 +25,7 @@ const Post = () => {
             <div className="section-title">
               <h2>{post.title.rendered}</h2>
 
-              {parse(post.excerpt.rendered)}
+              {/* {parse(post.excerpt.rendered)} */}
 
               {/* <img
                 className="post-image mx-auto d-block img-fluid rounded w-100 mt-3"

@@ -273,7 +273,9 @@ export const productsLoader = async () => {
       posts.posts = res.data;
       posts.pageCount = res.headers["x-wp-totalpages"];
     })
-    .catch((err) => console.error(err, "is error!"));
+    .catch((err) => {
+      console.error(err, "is error!");
+    });
 
   return { posts };
 };
