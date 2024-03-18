@@ -8,6 +8,11 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+
+::placeholder {
+  color: red;
+}
+
 @font-face {
   font-family: "Vazir FD-WOL";
   src: url("../fonts/Vazir-Medium-FD-WOL.eot");
