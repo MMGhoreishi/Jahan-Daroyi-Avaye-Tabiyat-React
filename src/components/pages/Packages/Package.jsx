@@ -89,7 +89,7 @@ const Package = () => {
                         <ul>
                           {postTags.map((tag) => {
                             return (
-                              <li key={tag.id}>
+                              <li key={tag.id} className="p-1">
                                 <Link
                                   to={`/packages/tags/${tag.id}/${tag.name}/${
                                     postCategories.length > 0 &&
