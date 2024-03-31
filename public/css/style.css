@@ -112,8 +112,12 @@ h6 {
   font-size: 1.2rem;
 }
 
+.content ul {
+  list-style: none !important;
+}
+
 .content ul li:before {
-  content: "\2611\0020" !important;
+  content: "\2714\0020" !important;
 }
 
 /*--------------------------------------------------------------
