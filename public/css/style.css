@@ -2722,17 +2722,14 @@ section {
   position: relative;
   background: #d8eab7;
   padding: 20px 0;
-  color: #222222;
-  font-size: 14px;
   text-align: center;
   border-top: 2px solid #34b7a7;
 }
-
-#footer .credits {
-  padding-top: 5px;
-  font-size: 13px;
+#footer .copyright-text {
+  color: #222222;
+  font-size: 14px;
 }
-
-#footer .credits a {
-  color: #34b7a7;
+#footer .construction-group {
+  color: #606060;
+  font-size: 13px;
 }

@@ -110,8 +110,20 @@ const MainLayout = ({ children }) => {
       <footer id="footer">
         <div className="container">
           <div className="copyright">
-            s تمام حقوق سایت متعلق به شرکت داروسازی جهان دارویی آوای طبیعت می
-            باشد
+            <p className="copyright-text">
+              تمام حقوق سایت متعلق به شرکت داروسازی جهان دارویی آوای طبیعت می
+              باشد
+            </p>
+            <p className="construction-group">
+              طراحی شده توسط{" "}
+              <a
+                href="https://sharifwebdesigner.ir"
+                target="_blank"
+                rel="noreferrer"
+              >
+                تیم شریف وب دیزاینر
+              </a>
+            </p>
           </div>
         </div>
       </footer>
