@@ -37,7 +37,7 @@ const AgencyPost = () => {
               />
             </div>
             <div className="row mt-5">
-              <div className="agencyPost-content col-12">
+              <div className="content agencyPost-content col-12">
                 {parse(post.content.rendered)}
 
                 <div className="row agencyPost-information">

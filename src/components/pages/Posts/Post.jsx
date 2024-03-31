@@ -38,7 +38,7 @@ const Post = () => {
               /> */}
             </div>
             <div className="row mt-5">
-              <div className="post-content col-12">
+              <div className="content post-content col-12">
                 {parse(post.content.rendered)}
 
                 <div className="row post-information">

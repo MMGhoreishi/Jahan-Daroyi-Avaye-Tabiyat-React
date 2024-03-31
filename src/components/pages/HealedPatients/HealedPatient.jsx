@@ -37,7 +37,7 @@ const HealedPatient = () => {
               />
             </div>
             <div className="row mt-5">
-              <div className="healedPatient-content col-12">
+              <div className="content healedPatient-content col-12">
                 {parse(post.content.rendered)}
 
                 <div className="row healedPatient-information">

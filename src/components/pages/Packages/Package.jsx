@@ -52,7 +52,7 @@ const Package = () => {
               />
             </div>
             <div className="row mt-5">
-              <div className="package-content col-12">
+              <div className="content package-content col-12">
                 {parse(post.content.rendered)}
 
                 <SaleBanner />

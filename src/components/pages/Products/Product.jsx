@@ -49,7 +49,7 @@ const Product = () => {
               />
             </div>
             <div className="row mt-5">
-              <div className="product-content col-12">
+              <div className="content product-content col-12">
                 {parse(post.content.rendered)}
 
                 <SaleBanner />
